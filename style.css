@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'Optima';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Optima'), url('fonts/OPTIMA.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Optima Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Optima Medium'), url('fonts/Optima\ Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Optima Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Optima Bold'), url('fonts/OPTIMA_B.woff') format('woff');
+}
+:root{
+    --optima-normal: 'Optima', sans-serif;
+    --color-corp: #314385;
+    --color-grey: #D9D9D9;
+}
+body {
+    font-family: var(--optima-normal);
+}
+a{
+    color: inherit;
+}
+.text-grey{
+    color: var(--color-grey);
+}
+
+.strocked-text{
+    -webkit-text-stroke: 0.5px white;
+}
+.btn{
+    background: var(--color-corp);
+    padding: 10px 70px;
+    color: white;
+    border-radius: 0;
+    font-size: clamp(16px, 1.35vw, 28px);
+}
+.btn:hover {
+    background: var(--color-corp);
+    color: white;
+    text-decoration: underline;
+}
+.fs-title{
+    font-size: clamp(18px, 1.6vw, 46px);
+}
+.dropdown-menu.mega-menu{
+    left: 0;
+    border-radius: 0;
+    border: none;
+    background: var(--color-corp);
+    color: white;
+}
+.dropdown-hover>.dropdown-toggle:active {
+    /*Without this, clicking will make it sticky*/
+    pointer-events: none;
+}
+/*breackpoints*/
+@media (min-width: 1650px) {
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 1620px;
+    }
+}
