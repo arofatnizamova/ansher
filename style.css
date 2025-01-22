@@ -18,8 +18,10 @@
     font-weight: normal;
     src: local('Optima Bold'), url('fonts/OPTIMA_B.woff') format('woff');
 }
+/*roots and global styles*/
 :root{
     --optima-normal: 'Optima', sans-serif;
+    --Josefin-Sans: 'Josefin Sans', sans-serif;
     --color-corp: #314385;
     --color-grey: #D9D9D9;
 }
@@ -29,16 +31,21 @@ body {
 a{
     color: inherit;
 }
+.ff-josefin{
+    font-family: var(--Josefin-Sans);
+}
 .text-grey{
     color: var(--color-grey);
 }
-
+.text-corp{
+    color: var(--color-corp);
+}
 .strocked-text{
     -webkit-text-stroke: 0.5px white;
 }
 .btn{
     background: var(--color-corp);
-    padding: 10px 70px;
+    padding: 10px 60px;
     color: white;
     border-radius: 0;
     font-size: clamp(16px, 1.35vw, 28px);
@@ -59,9 +66,31 @@ a{
     color: white;
 }
 .dropdown-hover>.dropdown-toggle:active {
-    /*Without this, clicking will make it sticky*/
     pointer-events: none;
 }
+.dropdown-toggle::after{
+    display: none;
+}
+.nav-link, .megamenu-link{
+    text-decoration: underline;
+    font-size: clamp(0.75rem, 0.675rem + 0.375vw, 1.125rem);
+}
+.navbar-toggler-icon{
+    background-image: url('icons/burger-icon.svg');
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+/*typography*/
+.fs-paragraph{
+    font-size: clamp(1.125rem, 0.95rem + 0.875vw, 2rem);
+}
+
+/*styles*/
+.bg-wave{
+    background: url('images/home-page/wave.png') no-repeat center/cover;
+}
+
 /*breackpoints*/
 @media (min-width: 1650px) {
     .container,
@@ -72,4 +101,20 @@ a{
     .container-xxl {
         max-width: 1620px;
     }
+}
+@media (max-width: 576px){
+    .h-sm-large{
+        height: 350px;
+    }
+    .logo{
+        width: 200px;
+    }
+    .navbar-toggler-icon {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .btn{
+        padding: 6px 30px;
+    }
+
 }
