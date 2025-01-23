@@ -21,6 +21,7 @@
 /*roots and global styles*/
 :root{
     --optima-normal: 'Optima', sans-serif;
+    --optima-medium: 'Optima Medium', sans-serif;
     --Josefin-Sans: 'Josefin Sans', sans-serif;
     --color-corp: #314385;
     --color-grey: #D9D9D9;
@@ -30,15 +31,28 @@ body {
 }
 a{
     color: inherit;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
 }
 .ff-josefin{
     font-family: var(--Josefin-Sans);
+}
+.ff-optima-medium{
+    font-family: var(--optima-medium);
+}
+.fs-section-title{
+    font-size: 20px;
 }
 .text-grey{
     color: var(--color-grey);
 }
 .text-corp{
     color: var(--color-corp);
+}
+.bg-corp{
+    background: var(--color-corp);
 }
 .strocked-text{
     -webkit-text-stroke: 0.5px white;
@@ -54,9 +68,6 @@ a{
     background: var(--color-corp);
     color: white;
     text-decoration: underline;
-}
-.fs-title{
-    font-size: clamp(18px, 1.6vw, 46px);
 }
 .dropdown-menu.mega-menu{
     left: 0;
@@ -81,14 +92,76 @@ a{
 .navbar-toggler:focus{
     box-shadow: none;
 }
+.w-sm-30{
+    width: 30%;
+}
+.w-sm-50{
+    width: 50%;
+}
+.w-lg-90{
+    width: 90% !important;
+}
+.w-fit-content{
+    width: fit-content;
+}
+.text-balance{
+    text-wrap: balance;
+}
+.slider-btn-box{
+    bottom: -20px;
+}
 /*typography*/
+.fs-title {
+    font-size: clamp(18px, 1.6vw, 46px);
+}
+.fs-title-2{
+    font-size: clamp(1.25rem, 1rem + 1.25vw, 2.5rem);
+}
 .fs-paragraph{
     font-size: clamp(1.125rem, 0.95rem + 0.875vw, 2rem);
 }
-
+.fs-paragraph-2{
+    font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1.25rem);
+}
+.fs-paragraph-3{
+    font-size: clamp(1.125rem, 1rem + 0.625vw, 1.75rem);
+}
+.fs-footer-link{
+    font-size: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
+}
+.fs-span{
+    font-size: 14px;
+}
+.fs-span-2{
+    font-size: 16px;
+}
+.fs-icon{
+    font-size: 30px;
+}
+.text-limit{
+    display: -webkit-box;
+        /* Включает флекс-контейнер с поддержкой многострочного отображения */
+        -webkit-box-orient: vertical;
+        /* Задает ориентацию флекс-контейнера по вертикали */
+        overflow: hidden;
+        /* Скрывает текст, выходящий за пределы */
+        text-overflow: ellipsis;
+        /* Добавляет многоточие в конце текста */
+        -webkit-line-clamp: 1;
+}
 /*styles*/
 .bg-wave{
     background: url('images/home-page/wave.png') no-repeat center/cover;
+}
+.number{
+    font-size: 90px;
+    color: white;
+    background: var(--color-corp);
+    padding: 20px 40px;
+}
+.map{
+    width: 100%;
+    height: 80%;
 }
 
 /*breackpoints*/
@@ -101,6 +174,17 @@ a{
     .container-xxl {
         max-width: 1620px;
     }
+}
+@media (max-width: 990px) {
+    .w-sm-30 {
+        width: 50%;
+    }
+        .map {
+            height: 300px;
+        }
+        .w-sm-fit-content{
+            width: fit-content;
+        }
 }
 @media (max-width: 576px){
     .h-sm-large{
@@ -115,6 +199,24 @@ a{
     }
     .btn{
         padding: 6px 30px;
+    }
+        .w-sm-30 {
+            width: 100%;
+        }
+    .number{
+        font-size: 60px;
+    }
+        .bg-wave {
+            background: url('images/home-page/wave-mobile.png') no-repeat left top / 100% auto ;
+        }
+        .fs-span-2 {
+            font-size: 14px;
+        }
+    .fs-icon {
+        font-size: 25px;
+    }
+    .footer-logo{
+        width: 250px;
     }
 
 }
