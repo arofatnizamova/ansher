@@ -142,6 +142,9 @@ a:hover{
 .fs-paragraph-4{
     font-size: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
 }
+.fs-paragraph-5{
+    font-size: clamp(0.875rem, 0.65rem + 1.125vw, 2rem);
+}
 .fs-footer-link{
     font-size: clamp(1rem, 0.975rem + 0.125vw, 1.125rem);
 }
@@ -166,6 +169,16 @@ a:hover{
         -webkit-line-clamp: 1;
 }
 /*styles*/
+.main-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+}
+.main-header .nav-link{
+    color: white;
+}
 .bg-wave{
     background: url('images/home-page/wave.png') no-repeat center/cover;
 }
@@ -200,9 +213,8 @@ a:hover{
     padding: 20px;
 }
 .about-info-box{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
     z-index: 3;
 }
 /*breackpoints*/
