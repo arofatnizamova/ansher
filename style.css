@@ -244,6 +244,10 @@ a:hover{
     .lg-transform{
         transform: rotate(90deg);
     }
+        .dropdown-menu.mega-menu {
+            background: transparent;
+            color: unset;
+        }
 }
 @media (max-width: 576px){
     .h-sm-large{
