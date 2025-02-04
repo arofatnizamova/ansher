@@ -333,7 +333,12 @@ a:hover{
     position: relative;
     border-radius: 6px;
 }
-
+/* .img-hover-scale{
+    transition: all 0.3s ease;
+}
+.img-hover-scale:hover{
+    transform: scale(1.1);
+} */
 /*breackpoints*/
 @media (min-width: 1650px) {
     .container,
