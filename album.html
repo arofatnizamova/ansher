@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -195,7 +195,95 @@
             </div>
         </nav>
     </header>
+    <style>
+        /* Стили для контейнера галереи */
+        #my-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 3 колонки на больших экранах */
+            gap: 10px;
+            padding: 10px;
+            grid-auto-rows: 200px;
+            /* Минимальная высота изображений */
+        }
+    
+        /* Стили для элементов галереи */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #eee;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        /* Стили для изображений */
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    
+        /* Адаптация для мобильных устройств (1 колонка) */
+        @media (max-width: 768px) {
+            #my-gallery {
+                grid-template-columns: 1fr;
+                /* 1 колонка на мобильных */
+            }
+        }
+    
+        /* Фиксация высоты для некоторых изображений */
+        .gallery-item:nth-child(2n) {
+            grid-row: span 2;
+            /* Растягиваем элемент по вертикали */
+        }
+    
+        .gallery-item:nth-child(3n) {
+            grid-row: span 2;
+            /* Растягиваем элемент по вертикали */
+        }
+    </style>
     <main>
+        <div class="container">
+            <div id="my-gallery">
+                <a href="images/gallery/1.png" class="gallery-item" data-pswp-width="800" data-pswp-height="800">
+                    <img src="images/gallery/1.png" alt="Image 1">
+                </a>
+                <a href="images/gallery/2.png" class="gallery-item"  data-pswp-width="1200" data-pswp-height="800">
+                    <img src="images/gallery/2.png" alt="Image 2">
+                </a>
+                <a href="images/gallery/3.png" class="gallery-item" data-pswp-width="1200" data-pswp-height="800">
+                    <img src="images/gallery/3.png" alt="Image 3">
+                </a>
+                <a href="images/gallery/4.png" class="gallery-item" data-pswp-width="1200" data-pswp-height="800">
+                    <img src="images/gallery/4.png" alt="Image 4">
+                </a>
+                <a href="images/gallery/5.png" class="gallery-item" data-pswp-width="1200" data-pswp-height="800">
+                    <img src="images/gallery/5.png" alt="Image 5">
+                </a>
+                <a href="images/gallery/6.png" class="gallery-item" data-pswp-width="1200" data-pswp-height="800">
+                    <img src="images/gallery/6.png" alt="Image 5">
+                </a>
+                <a href="images/gallery/7.png" class="gallery-item" data-pswp-width="1200" data-pswp-height="800">
+                    <img src="images/gallery/7.png" alt="Image 5">
+                </a>
+                <a href="images/gallery/8.png" class="gallery-item" data-pswp-width="800" data-pswp-height="800">
+                    <img src="images/gallery/8.png" alt="Image 5">
+                </a>
+                <a href="images/gallery/9.png" class="gallery-item" data-pswp-width="1200" data-pswp-height="800">
+                    <img src="images/gallery/9.png" alt="Image 5">
+                </a>
+                <a href="images/gallery/10.png" class="gallery-item" data-pswp-width="1200" data-pswp-height="800">
+                    <img src="images/gallery/10.png" alt="Image 5">
+                </a>
+                <a href="images/gallery/11.png" class="gallery-item" data-pswp-width="1200" data-pswp-height="800">
+                    <img src="images/gallery/11.png" alt="Image 5">
+                </a>
+                <a href="images/gallery/12.png" class="gallery-item" data-pswp-width="1200" data-pswp-height="800">
+                    <img src="images/gallery/12.png" alt="Image 5">
+                </a>
+            </div>
+        </div>
         
     </main>
 
@@ -206,55 +294,6 @@
                     <img src="icons/logo-footer.svg" alt="" class="img-fluid footer-logo d-block mx-lg-0 mx-auto">
                 </div>
                 <div class="col-lg-8">
-                    <div class="row justify-content-between gy-4">
-                        <div class="col-lg-3">
-                            <div class="w-100 h-100 text-center">
-                                <p class="text-decoration-underline">
-                                    <a href="http://en.ansher.capital/">
-                                        Ansher Capital
-                                    </a>
-                                </p>
-                                <a href="news.html">News</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="w-100 h-100 text-center">
-                                <p class="text-decoration-underline">
-                                    Ansher Investment LLP
-                                </p>
-                                <a href="about.html">About Us</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="w-100 h-100 text-center">
-                                <p class="text-decoration-underline">
-                                    Team
-                                </p>
-                                <ul class="list-unstyled">
-                                    <li class="mb-2">
-                                        <a href="directors.html">Board of Directors</a>
-                                    </li>
-                                    <li>
-                                        <a href="managers.html">Executive managers</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col d-lg-none d-block">
-                            <div class="w-100 h-100">
-                                <p class="text-decoration-underline text-center">
-                                    Story of success
-                                </p>
-                                <ul class="list-unstyled text-center">
-                                    <li class="mb-2"><a href="founder.html">The founder</a></li>
-                                    <li class="mb-2"><a href="recognition.html">Recognition</a></li>
-                                    <li class="mb-2"><a href="song.html">Ansher Songs</a></li>
-                                    <li class="mb-2"><a href="media.html">Media about us</a></li>
-                                    <li class="mb-2"><a href="gallery.html">Photo gallery</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                     <hr class="d-lg-block d-none">
                     <div class="row gy-4">
                         <div class="col-lg-3">
@@ -274,8 +313,7 @@
                                 <a href="tel:+447452284950" class="d-block ms-xxl-3 ms-0">
                                     <span class="fi fi-gb me-3 rounded-1"></span>+44 7452 284950
                                 </a>
-                                <a href="mailto:info@ansherglobal.com"
-                                    class="d-block ms-sm-3 ms-0 d-flex align-items-center">
+                                <a href="mailto:info@ansherglobal.com" class="d-block ms-sm-3 ms-0 d-flex align-items-center">
                                     <i class="bi bi-envelope me-3 fs-4"></i>
                                     <span>info@ansherglobal.com</span>
                                 </a>
@@ -300,8 +338,7 @@
                             </p>
                         </div>
                         <div class="col-lg-9">
-                            <ul
-                                class="list-unstyled  d-flex flex-lg-row flex-column justify-content-start w-sm-fit-content mx-lg-0 mx-auto">
+                            <ul class="list-unstyled  d-flex flex-lg-row flex-column justify-content-start w-sm-fit-content mx-lg-0 mx-auto">
                                 <li class="me-lg-5">
                                     <a href="https://www.instagram.com/anshercapital.uz?igsh=MWxoNmVteXl5NDEydA=="
                                         class="d-block ms-sm-3 ms-0 mb-3 d-flex align-items-center">
@@ -311,30 +348,14 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="https://uz.linkedin.com/company/anshercapital"
-                                        class="d-block ms-sm-3 ms-0 d-flex align-items-center">
+                                    <a href="https://uz.linkedin.com/company/anshercapital" class="d-block ms-sm-3 ms-0 d-flex align-items-center">
                                         <i class="bi bi-linkedin me-3 fs-icon"></i>
                                         <span class="d-lg-inline d-none">Linkedin</span>
-                                        <span class="d-lg-none d-inline">www.linkedin.com/ <br>
-                                            company/anshercapital</span>
+                                        <span class="d-lg-none d-inline">www.linkedin.com/ <br> company/anshercapital</span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 d-lg-block d-none">
-                    <div class="w-100 h-100">
-                        <p class="text-decoration-underline text-center">
-                            Story of success
-                        </p>
-                        <ul class="list-unstyled text-center">
-                            <li class="mb-2"><a href="founder.html">The founder</a></li>
-                            <li class="mb-2"><a href="recognition.html">Recognition</a></li>
-                            <li class="mb-2"><a href="song.html">Ansher Songs</a></li>
-                            <li class="mb-2"><a href="media.html">Media about us</a></li>
-                            <li class="mb-2"><a href="gallery.html">Photo gallery</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -342,12 +363,26 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.4/photoswipe-lightbox.esm.min.js"></script>
     <script src="https://kit.fontawesome.com/ab16f4767e.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="main.js"></script>
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe-lightbox.esm.min.js';
+        import PhotoSwipe from 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe.esm.min.js';
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#my-gallery',
+            children: 'a',
+            pswpModule: () => import('https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.3.3/photoswipe.esm.min.js')
+        });
+
+
+        lightbox.init();
+    </script>
+
 </body>
 
 </html>
