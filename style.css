@@ -419,6 +419,19 @@ a:hover{
     .container-xxl {
         max-width: 1620px;
     }
+        
+}
+@media (max-width: 1650px){
+    .history-prev {
+            top: -20px;
+            right: 60px;
+            left: unset;
+        }
+    
+    .history-next {
+        top: -20px;
+        right: 0px;
+    }
 }
 @media (max-width: 990px) {
     .w-sm-30 {
@@ -547,6 +560,22 @@ a:hover{
     .w-sm-40 {
         width: 100%;
     }
+        .history-prev {
+            top: unset;
+            bottom: -40px;
+            left: 40%;
+            transform: translate(-40%);
+            right: unset;
+            margin-right: 30px;
+        }
+    
+        .history-next {
+            top: unset;
+            bottom: -40px;
+            left: 60%;
+            transform: translate(-60%);
+            right: unset;
+        }
 }
 @media(max-width: 420px){
     .mt-6 {
