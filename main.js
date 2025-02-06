@@ -26,26 +26,25 @@ $(document).ready(function () {
         slidesToShow: 3,
         slidesToScroll: 3,
         infinite: true,
-        dots: true
+        arrows: true,
       }
     },
     {
       breakpoint: 900,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        arrows: true,
       }
     },
     {
       breakpoint: 480,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        arrows: true,
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ]
       }
     }
@@ -66,4 +65,6 @@ $(document).ready(function () {
   $(document).on('click', function () {
     $('.dropdown-menu').slideUp(200).removeClass('show'); 
   });
+
+  
 });
